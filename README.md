@@ -1,11 +1,14 @@
 # Étude marketing :
 
+---------------
 Application : Dealabs
 
 Descriptif de l'application :
 Regroupe une communauté à la recherche de bons plans et qui les mettent en ligne eux même.
 Les revenus de l'application proviennent des commissions prises sur les achats des utilisateurs.
 
+
+----------------
 Difficulté incrémentale : Non
 Offrir de l'inaccessible : Non
 Exemples de contenus : Non
@@ -40,13 +43,14 @@ Objectif non achat : Non
 Gros contenu pour baleines : Non
 Demander poliment: Non
 
-
+----------------
 
 Jeu : Clash Royale
 
 Description :
 Jeu mobile addictif massivement multijoueur qui se joue avec des cartes.
 
+----------------
 Difficulté incrémentale : Oui
 Offrir de l'inaccessible : Oui
 Exemples de contenus : Non
@@ -81,8 +85,8 @@ Objectif non achat : Oui
 Gros contenu pour baleines : Oui
 Demander poliment: Non
 
+----------------
+# Équipe : Tano
 
-# Équipe : SlimJim
-
-# 
+# Idée de l'appli : Application qui permet aux clients de savoir à l'avance la place restante dans ses restaurants préférés.
 
