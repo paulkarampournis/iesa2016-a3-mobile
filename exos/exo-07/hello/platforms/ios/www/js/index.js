@@ -27,7 +27,21 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
+    },
+    checkConnection: function(){
+        var networkState = navigator.connection.type;
+        var states = {};
+        states[Connection.UNKNOWN] = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI] = 'Wifi connection';
+        states[Connection.CELL_2G] = '2G connection';
+        states[Connection.CELL_3G] = '3G connection';
+        states[Connection.CELL_4G] = '4G connection';
+        states[Connection.CELL] = 'generic connection';
+        states[Connection.NONE] = 'No network connection';
+        alert('Connection type: ' + states[networkState]);
     },
     // deviceready Event Handler
     //
@@ -44,18 +58,28 @@ var app = {
         + '<li data-icon="arrow-1">Name: '+ device.platform +'</li>'
         + '<li data-icon="arrow-r">Name: '+ device.uuid +'</li>'
         + '<li data-icon="arrow-1">Name: '+ device.version +'</li>'
-        + '</ul>'
+        + '</ul>';
+
+        document.addEventListener('online', this.checkConnection);
+        document.addEventListener('offline', this.checkConnection);
+        console.log(navigator.contacts);
+        document.getElementById('connexion').innerHTML(networkState);
+
+        $('#contact').html(contacts[0].name.givenName+' '+contacts[0].name.familyName);
+
+
     },
+
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+
+
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
-
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
     }
 };
 
